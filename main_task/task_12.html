@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Check</title>
+</head>
+
+<body>
+    <script>
+        //Write a program that prints the largest of 4 inputs taken in from a user. Assume that the user would not enter any two numbers which are the same.
+        let num1 = parseInt(prompt("Enter The First Number:"));
+        let num2 = parseInt(prompt("Enter The Second Number:"));
+        let num3 = parseInt(prompt("Enter The Third Number:"));
+        let num4 = parseInt(prompt("Enter The Fourth Number:"));
+        if (num1 > num2 && num1 > num3 && num1 > num4) {
+            alert(+num1 + ": Number One Is The Largest Number.");
+        } else if (num2 > num1 && num2 > num3 && num2 > num4) {
+            alert(+num2 + ": Number Two Is The Largest Number.");
+        } else if (num3 > num1 && num3 > num2 && num3 > num4) {
+            alert(+num3 + ": Number Three is the Lagerst Number.");
+        } else {
+            alert(+num4 + ": Number Four is the Lagerst Number.");
+        }
+
+
+
+    </script>
+</body>
+
+</html>

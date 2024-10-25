@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //TASK 6:Using Python or PHP or Java or Ruby or JavaScript
+    //Write a program that lets the user input a password.
+    //Give them only 4 attempts to check the passwords entered against “admin@123”.
+    //If the password is correct access is granted. After you show them a message , the account is blocked.
+    /*let attempts = 4;
+      function valid_login(valid_password) {
+        for (let i = 0; i < attempts; i++) {
+          let response = "";
+          if (valid_password === "admin@123") {
+            response = "Access granted";
+          } else {
+            attempts--;
+            if(attempts>0);{
+            response = "Incorrect password. Remaining attempts: " + attempts;
+          }
+        }
+        }
+        return response;
+      }
+      while (attempts > 0) {
+        let pass = prompt("Please Enter Your Password:");
+        let user_input = valid_login(pass);
+        alert(user_input);
+        if (user_input === "Access granted. The account is blocked!") {
+          break;
+        }
+    }*/
+
+    let attempts = 4;
+
+    function valid_login(valid_password) {
+      if (attempts === 0) {
+        return "The account is Blocked!";
+      }
+      if (valid_password === "admin@123") {
+        return "Access granted.";
+      } else {
+        attempts--;
+        alert("Incorrect password. Remaining attempts: " + attempts);
+        let pass = prompt("Please Enter Your Password:");
+        return valid_login(pass);
+      }
+    }
+
+    let pass = prompt("Please Enter Your Password:");
+    let user_input = valid_login(pass);
+    alert(user_input);
+
+    //Method 3
+    /*function checkPass() {
+      let correct_pass = "admin@123";
+      let attempts = 4;
+      for (i = 0; i < 4; i++) {
+        if (pass === correct_pass) {
+          alert("Access Granted!");
+          break;
+        } else {
+          attempts++;
+          let Remaining = "Incorrect password. Remaining attempts:" + attempts;
+          if (Remaining === 0) {
+            alert("The account is Blocked!");
+          }
+        }
+      }
+    }*/
+  </script>
+</body>
+
+</html>

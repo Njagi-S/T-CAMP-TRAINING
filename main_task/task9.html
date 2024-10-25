@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Write a program called stars. It should prompt the user for a number, and it should print the number of stars till the number entered.
+        //Example If rows is 5, it should print the following:
+        /*
+        **
+        ***
+        ****
+        *****/
+        //Method 1
+        let rows = Number(prompt("Enter the number of rows"));
+        for (let i = 0; i < rows; i++) {
+            let stars = "";
+            for (let j = 0; j <= i; j++) {
+                stars += "*";
+            }
+            console.log(stars);
+        }
+
+        // Method 2
+        let starss = "*";
+        for (i = 0; i <= rows; i++) {
+          console.log(starss.repeat(i));
+        }
+      let my_input = Number(prompt("Please Enter You Desired Number Of Rows:"));
+      let final_starss = check_stars(my_input);
+      console.log(final_starss);
+    </script>
+</body>
+
+</html>

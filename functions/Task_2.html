@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //TASK 2: Using Python or PHP or Java or Ruby or JavaScript
+      //Prompt the user for a number either on a form input or the terminal. Depending on whether the number is even or odd, display  either “odd” or “even” to the user.
+      function checkNumber(num) {
+        let result = "";
+        if (num % 2 == 0) {
+          result = "The number Is An Even Number.";
+        } else {
+          result = "The Number Is An Odd Number.";
+        }
+        return result;
+      }
+      let num1 = Number(prompt("Enter A Number."));
+      alert(checkNumber(num1));
+    </script>
+  </body>
+</html>

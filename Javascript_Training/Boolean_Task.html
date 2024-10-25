@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Q1 console log a boolean that checks if a number is between 0 and 100  
+        let num = -1;
+        let isBetween = (num >= 0 && num <= 100);
+        console.log(isBetween);
+
+        /*let number_two = 9800;
+        let isBetween_two = (0 >= isBetween_two <= 100 );
+        console.log(isBetween_two);*/
+
+        //Q2 console log a boolean that gives you true only when an email is valid. dont use regular expression.
+        function isValidEmail(email) {
+            const atSymbolIndex = email.indexOf('@');
+            const dotIndex = email.lastIndexOf('.');
+
+            return atSymbolIndex > 0 &&
+                dotIndex > atSymbolIndex &&
+                dotIndex < email.length - 1 &&
+                email.length > 5;
+        }
+
+        const email = 'sheldonnjagi@gmail.com';
+        console.log(isValidEmail(email));
+
+        //Method Two
+        let email_two = 'sheldonnjagigmail.com';
+        console.log(email_two.includes("@") && email_two.includes("."));
+
+
+        /*Q3 Console log a boolean that gives you true only when a phone number is a valid Kenyan phonenumber. If someone enters either +254712345678, 254712345678, 0712345678 , 712345678, 0112345678, 112345678 it should be valid also.*/
+        function isValidKenyanPhoneNumber(phoneNumber) {
+            const phoneNumberStr = phoneNumber.toString();
+            const startsWithPlus254 = phoneNumberStr.startsWith('+254');
+            const startsWith254 = phoneNumberStr.startsWith('254');
+            const startsWith0 = phoneNumberStr.startsWith('0');
+
+            if (startsWithPlus254) {
+                return phoneNumberStr.length === 13;
+            } else if (startsWith254) {
+                return phoneNumberStr.length === 12;
+            } else if (startsWith0) {
+                return phoneNumberStr.length === 10;
+            } else {
+                return false;
+            }
+        }
+
+        const phoneNumber = '07812345678'; //replace with the phone number you want to check
+        console.log(isValidKenyanPhoneNumber(phoneNumber));
+
+        //Method Two
+        let phoneNumber_two = prompt("Enter Your PhoneNumber: ");
+        console.log(phoneNumber_two.startsWith("+254") || phoneNumber_two.startsWith("254") || phoneNumber_two.startsWith("07") || phoneNumber_two.startsWith("7") || phoneNumber_two.startsWith("01") || phoneNumber_two.startsWith("1"));
+    </script>
+</body>
+
+</html>

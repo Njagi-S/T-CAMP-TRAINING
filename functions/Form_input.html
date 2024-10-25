@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="myForm">
+        <label for="">First Character</label><br />
+        <input type="text" id="num1" name="num1" required /><br />
+        <label for="">Second Character</label><br />
+        <input type="text" id="num2" name="num2" required /><br />
+        <button type="submit">Calculate</button>
+    </form>
+    <div id="solution">
+
+    </div>
+    <script>
+        // Get the form to js and store it in a variable
+        let form = document.getElementById("myForm");
+        //add an event
+        form.addEventListener("submit", function (e) {
+            // prevent the default action of the form
+            e.preventDefault();
+            // Get  the values of the input fields
+            let First_Character = document.getElementById("num1").value;
+            let Second_Character = document.getElementById("num2").value;
+            let Third_Character = First_Character + "  " + Second_Character;
+
+            //Transfer The Final  Variable  to the div
+            document.getElementById("solution").innerHTML = Third_Character
+
+
+
+            //console.log(First_Character);
+            //console.log(Second_Character);
+
+        });
+    </script>
+</body>
+
+</html>

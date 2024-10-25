@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Write a program that takes input of 2 values and adds them.
+        The program should only accept numbers and floats only or otherwise display an error,
+        “invalid character entered” and take the user to re-enter the inputs .*/
+        
+        // Get the inputs Values from the user.
+
+        let num1=prompt('Enter The First Number:');
+        let num2=prompt("Enter The Second Number:");
+        
+        //Validate the inputs.
+
+        while(isNaN(parseFloat(num2))  || isNaN(parseFloat(num2))){
+            alert("Invalid character entered.  Please enter  numbers only");
+            num1=prompt('Enter The First Number:');
+            num2=prompt("Enter The Second Number:");
+        }
+
+        //Convert the input values to numbers
+
+        num1=parseFloat(num1);
+        num2=parseFloat(num2);
+        // Add the NUmbers
+
+        let sum =num1+num2;
+        //Display the results
+
+        alert('The sum is: '+sum);
+
+        // using functions
+        /*function validateInput() {
+            let num1 = prompt("Enter the first number:");
+            let num2 = prompt("Enter the second number:");
+            if (isNaN(parseFloat(num1)) || isNaN(parseFloat(num2))) {
+              alert("Invalid character entered. Please enter numbers only.");
+              validateInput();
+            } else {
+              return [num1, num2];
+            }
+          }
+          
+          let [num1, num2] = validateInput();
+          
+          // Convert the input values to numbers
+          num1 = parseFloat(num1);
+          num2 = parseFloat(num2);
+          
+          // Add the numbers
+          let sum = num1 + num2;
+          
+          // Display the result
+          alert(`The sum is: ${sum}`);*/
+
+    </script>
+</body>
+</html>

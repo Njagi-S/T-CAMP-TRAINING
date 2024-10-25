@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Write a program that asks for the users age and classifies them as a child (0-12), teenager (13-19), adult (20-64 and older (65 and above)
+        let age = Number(prompt("Enter your age"));
+        if (age > 0) {
+            if (age >= 0 && age <= 12) {
+                console.log("You are a child");
+            }
+            else if (age >= 13 && age <= 19) {
+                console.log("You are a teenager");
+            }
+            else if (age >= 20 && age <= 64) {
+                console.log("You are an adult");
+            }
+            else {
+                console.log("You are an older adult");
+            }
+        }
+        else {
+            console.log("Invalid age");
+        }
+    </script>
+</body>
+
+</html>

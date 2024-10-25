@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //TASK 7: Using Python or PHP or Java or Ruby or JavaScript
+      //Write that prompts the user to input student marks. The input should be between 0 and 100.
+      //Then output the correct grade:
+      //A > 79 , B - 60 to 79, C  > 50 to 59, D - 40 to 49, E - less 40
+
+      function my_grades(marks) {
+        let grade = "";
+        if (marks >= 0 && marks <= 100) {
+          if (marks > 79) {
+            grade = "You have an  A";
+          } else if (marks >= 60 && marks <= 79) {
+            grade = "You have a B";
+          } else if (marks >= 50 && marks <= 59) {
+            grade = "You have a C";
+          } else if (marks >= 40 && marks <= 49) {
+            grade = "You have a D";
+          } else {
+            grade = "You have an E";
+          }
+        } else {
+          grade = "Invalid Grade;";
+        }
+        return grade;
+      }
+      let new_grade = Number(prompt("Please Input You Marks:"));
+      let final_grade = my_grades(new_grade);
+      console.log(final_grade);
+    </script>
+  </body>
+</html>

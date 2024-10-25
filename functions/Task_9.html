@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //TASK 9: Using Python or PHP or Java or Ruby or JavaScript
+    //Write a program called stars. It should prompt the user for a number, and it should print the number of stars till the number entered.
+    //Example If rows is 5, it should print the following:
+    /*
+     **
+     ***
+     ****
+     *****/
+
+    // Method  1: Using for loop
+
+    /*function stars(rows) {
+      let result = "";
+      for (let i = 1; i <= rows; i++) {
+        let starPattern = "";
+        for (let j = 1; j <= i; j++) {
+          starPattern += "*";
+        }
+        result += starPattern + "\n";
+      }
+      return result;
+    }
+    let numberOfRows = Number(prompt("Enter the number of rows: "));
+    let starPattern = stars(numberOfRows);
+    console.log(starPattern);*/
+
+
+
+    // Method 2
+    function check_stars(rows) {
+      let starss = "*";
+      for (i = 0; i <= rows; i++) {
+        console.log(starss.repeat(i));
+      }
+    }
+    let my_input = Number(prompt("Please Enter You Desired Number Of Rows:"));
+    let final_starss = check_stars(my_input);
+    console.log(final_starss);
+  </script>
+</body>
+
+</html>

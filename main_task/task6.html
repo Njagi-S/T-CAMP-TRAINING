@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //Write a program that lets the user input a password. Give them only 4 attempts to check the passwords entered against “admin@123”. If the password is correct access is granted. After you show them a message , the account is blocked.
+
+    let userInput;
+    let password = "admin@123";
+    let attempts = 4;
+
+    for (let i = 0; i < attempts; i++) {
+      userInput = prompt("Enter your password: ");
+      if (userInput === password) {
+        console.log("Access granted!");
+        break;
+      } else if (i === attempts - 1) {
+        console.log("Account blocked. Maximum attempts exceeded.");
+      } else {
+        console.log(`Incorrect password. You have ${attempts - i - 1} attempts left.`);
+      }
+    }
+
+
+    /*method 2
+    const correctPassword = "admin@123";
+    let attempts = 0;
+    const maxAttempts = 4;
+
+    while (attempts < maxAttempts) {
+      const userInput = prompt("Enter your password:");
+      if (userInput === correctPassword) {
+        alert("Access granted!");
+        break;
+      } else {
+        attempts++;
+        alert(`Incorrect password. You have ${maxAttempts - attempts} attempt(s) left.`);
+        if (attempts === maxAttempts) {
+          alert("Account blocked due to too many incorrect attempts.");
+        }
+      }
+    }*/
+  </script>
+</body>
+
+</html>

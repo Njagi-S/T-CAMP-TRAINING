@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Create a function that checks if a number is an even or odd number( use parameters and arguments)
+      function checkNumber(num) {
+        let result = "";
+        if (num % 2 == 0) {          
+          result = "The number Is An Even Number.";
+        } else {
+          result = "The Number Is An Odd Number.";
+        }
+        return result;
+      }
+      let num1 = Number(prompt("Enter A Number."));
+      console.log(checkNumber(num1));
+      
+    </script>
+  </body>
+</html>

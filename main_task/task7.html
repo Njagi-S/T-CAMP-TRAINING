@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  Write that prompts the user to input student marks. The input should be between 0 and 100.Then output the correct grade: 
+        // A > 79 , B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less 40
+        let marks = Number(prompt('Enter your Marks'));
+        if (marks >= 0 && marks <= 100) {
+
+            if (marks > 79) {
+                console.log("You have an  A");
+            }
+            else if (marks >= 60 && marks <= 79) {
+                console.log("You have a B");
+            }
+            else if (marks >= 50 && marks <= 59) {
+                console.log("You have a C");
+            }
+            else if (marks >= 40 && marks <= 49) {
+                console.log("You have a D");
+            }
+            else {
+                console.log("You have an E");
+            }
+        }
+
+
+
+
+
+
+
+
+        let sal_range = Number(prompt("Enter your Salary:"));
+if (sal_range > 0) {
+    //let deductions = ""
+
+    if (sal_range <= 5_999) {
+        alert("150") ;
+    }
+    else if (sal_range >= 6_000 && sal_range <= 7_999) {
+        alert("300");
+    }
+    else if (sal_range >= 8_000 && sal_range <= 11_999) {
+        alert("400");
+    } else if (sal_range >= 12_000 && sal_range <= 14_999) {
+        alert("500");
+    } else if (sal_range >= 15_000 && sal_range <= 19_999) {
+        alert("600");
+    } else if (sal_range >= 20_000 && sal_range <= 24_999) {
+        alert("750");
+    } else if (sal_range >= 25_000 && sal_range <= 29_999) {
+        alert("850");
+    } else if (sal_range >= 30_000 && sal_range <= 34_999) {
+        alert("900");
+    } else if (sal_range >= 35_000 && sal_range <= 39_999) {
+        alert("950");
+    } else if (sal_range >= 40_000 && sal_range <= 44_999) {
+        alert("1000");
+    } else if (sal_range >= 45_000 && sal_range <= 49_999) {
+        alert("1100");
+    } else if (sal_range >= 50_000 && sal_range <= 59_999) {
+        alert("1200");
+    } else if (sal_range >= 60_000 && sal_range <= 69_999) {
+        alert("1300");
+    } else if (sal_range >= 70_000 && sal_range <= 79_999) {
+        alert("1400");
+    } else if (sal_range >= 80_000 && sal_range <= 89_999) {
+        alert("1500");
+    } else if (sal_range >= 90_000 && sal_range <= 99_999) {
+        alert("1600");
+    }else{
+        alert("1700");
+    }
+
+} else {
+    console.log("Invalid Input");
+}
+    </script>
+</body>
+
+</html>

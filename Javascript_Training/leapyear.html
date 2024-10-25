@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Create a variable called year and enter the a random year. Check if the year is a leap year or not. A leap year is a year that is divisible by 4 or  by 400, except for years that are divisible by 100.
+        // Create a variable called year and assign a random year
+        let year = Number(prompt("Enter the year:"));
+
+        // Check if the year is a leap year or not
+        if (year % 400 === 0) {
+            console.log(year + " is a leap year.");
+        } else if (year % 100 === 0) {
+            console.log(year + " is not a leap year.");
+        } else if (year % 4 === 0) {
+            console.log(year + " is a leap year.");
+        } else {
+            console.log(year + " is not a leap year.");
+        }
+    </script>
+</body>
+
+</html>

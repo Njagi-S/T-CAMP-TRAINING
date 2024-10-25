@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //TASK 4: Using Python or PHP or Java or Ruby or JavaScript
+      //Write a program which accepts email as form input or from terminal.
+      //Validate the email by checking if it's a valid email.
+      function valid_email(email) {
+        let correct = "";
+        if (email.includes("@") && email.includes(".")) {
+          correct = "Email is valid";
+        } else {
+          correct = 'Email is invalid! Error: Email should contain "@" symbol and "." symbol';
+        }
+        return correct;
+      }
+      let email1 = prompt("Enter Your Email Address:");
+      let final_email = valid_email(email1);
+      alert(final_email);
+    </script>
+  </body>
+</html>

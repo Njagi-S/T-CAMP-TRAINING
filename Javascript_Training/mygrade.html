@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // grade between 0-100
+        /*If the number is above 100 or below 0 give an error
+        Alert the grade of the student using the conditions below
+         >= 70 - A
+        <70 and >=60 - B
+        <60 and  >=50 - C
+        <50 and >=40 - D
+        < 40 - E*/
+        let marks = Number(prompt("Enter  your marks"));
+        if (marks >= 0 && marks <= 100) {
+            if (marks >= 70) {
+                alert("You Have an: A.");
+            }
+            else if (marks < 70 && marks >= 60) {
+                alert("You Have a: B.");
+            }
+            else if (marks < 60 && marks >= 50) {
+                alert("You Have a: C.");
+            }
+            else if (marks < 50 && marks >= 40) {
+                alert("You Have a: D.");
+            }
+            else {
+                alert("You Have an: E.");
+            }
+        }
+        else {
+            alert("Invalid marks. Please enter valid marks.")
+        }
+
+
+
+    </script>
+</body>
+
+</html>
